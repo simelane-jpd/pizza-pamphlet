@@ -62,3 +62,32 @@ h1 {
     }   
     
 }
+
+.Btn {
+    background-color:#fb5607;
+  
+}
+.cart {
+    background-color: #9d8189;
+    border-radius: 0.2cm;
+    text-align: center;
+}
+.cart-title {
+    color:#073b4c;
+}
+.check {
+    background-color:#fed9b7;
+   
+    
+    initial-letter: bold;
+    display: block;
+    margin: auto;
+   
+    border: none;
+    
+   
+   
+    font-size: 12pt;
+    font-weight: bold;
+  
+}
