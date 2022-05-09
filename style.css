@@ -70,6 +70,12 @@ h1 {
 .cart {
     background-color: #9d8189;
     border-radius: 0.2cm;
+    text-align:center;
+    
+}
+.boxpizza{
+    display: flex;
+   
     text-align: center;
 }
 .cart-title {

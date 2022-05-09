@@ -68,7 +68,7 @@ document.addEventListener('alpine:init', () => {
                 this.smallCount = 0
                 this.medCount = 0
                 this.largeCount = 0
-                window.alert("Enjoy your Pizza!")
+                window.alert("Approved! Enjoy your Pizza!")
             }
             
         }
