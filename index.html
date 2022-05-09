@@ -58,81 +58,84 @@
     
       
     <div class="cart" x-show="smallCount != 0 || medCount != 0 || largeCount != 0">
+       
         <div class="cart-title"><h1>Cart</h1></div>
 
-       <div class="boxpizza">
-       <div class="smallpizza" x-show="smallCount != 0">
-            <div>
-                <ul>
-               <h3>Small pizza</h3>
-                <img src="small.jpg" alt="">
-                <li> <button @click="addSmall" class="Btn">+</button>
-              
-              <span class="cart-quantity cart-header cart-column">Qty</span>
-                <span x-text="smallCount"></span>
-                <button @click="removeSmall" class="Btn">-</button>
-            </li>
-            </ul>
-              
-                
-            </div>
-            <div>
-               <span>Price: R</span>
-                <span x-text="getSmallTotal().toFixed(2)"></span>
-            </div>
-        </div>
-    
-        <div class="mediumpizza" x-show="medCount != 0">
-            <div>
-                <ul>
-                <h3>Medium pizza</h3>
-                <img src="small.jpg" alt="">
-               <li> <button @click="addMed" class="Btn">+</button>
-                <span class="cart-quantity cart-header cart-column">Qty</span>
-                <span x-text="medCount"></span>
-                <button @click="removeMed" class="Btn">-</button>
+        <div class="boxpizza">
+        <div class="smallpizza" x-show="smallCount != 0">
+             <div>
+                 <ul>
+                <h3>Small pizza</h3>
+                 <img src="small.jpg" alt="">
+                 <li> <button @click="addSmall" class="Btn">+</button>
                
-            </div>
-            <div>
-                <span>Price: R</span>
-                <span x-text="getMedTotal().toFixed(2)"></span>
-            </li>
-            </ul>
-            </div>
-        </div>
-        <div class="largepizza" x-show="largeCount != 0">
-            <div>
-                <ul>
-                    <h3>Large pizza</h3>
-                    <img src="small.jpg" alt="">
-                <li><button @click="addLarge" class="Btn">+</button>
-                <span class="cart-quantity cart-header cart-column">Qty</span>
-                <span x-text="largeCount"></span>
-              
-                <button @click="removeLarge" class="Btn">-</button>
+               <span class="cart-quantity cart-header cart-column">Qty</span>
+                 <span x-text="smallCount"></span>
+                 <button @click="removeSmall" class="Btn">-</button>
+             </li>
+             </ul>
                
-            </div>
-            <div>
+                 
+             </div>
+             <div>
                 <span>Price: R</span>
-                <span x-text="getLargeTotal().toFixed(2)"></span>
-            </li>
-            </ul>
-            </div>
+                 <span x-text="getSmallTotal().toFixed(2)"></span>
+             </div>
+         </div>
      
-        </div>
-    </div>
-        <h3><span>Amount payable: R</span><span class="total" x-text="getTotal().toFixed(2)"></span></h3>
-        <br>
-        <div class="checkout-sec">
-            <input type="number" value="1" x-model="tendered">
-           
-            <button @click="checkout" class="check">Pay</button>
-        </div>
-
-        <p x-text="feedbackText"></p>
-    </div>
-
+         <div class="mediumpizza" x-show="medCount != 0">
+             <div>
+                 <ul>
+                 <h3>Medium pizza</h3>
+                 <img src="small.jpg" alt="">
+                <li> <button @click="addMed" class="Btn">+</button>
+                 <span class="cart-quantity cart-header cart-column">Qty</span>
+                 <span x-text="medCount"></span>
+                 <button @click="removeMed" class="Btn">-</button>
+                
+             </div>
+             <div>
+                 <span>Price: R</span>
+                 <span x-text="getMedTotal().toFixed(2)"></span>
+             </li>
+             </ul>
+             </div>
+         </div>
+         <div class="largepizza" x-show="largeCount != 0">
+             <div>
+                 <ul>
+                     <h3>Large pizza</h3>
+                     <img src="small.jpg" alt="">
+                 <li><button @click="addLarge" class="Btn">+</button>
+                 <span class="cart-quantity cart-header cart-column">Qty</span>
+                 <span x-text="largeCount"></span>
+               
+                 <button @click="removeLarge" class="Btn">-</button>
+                
+             </div>
+             <div>
+                 <span>Price: R</span>
+                 <span x-text="getLargeTotal().toFixed(2)"></span>
+             </li>
+             </ul>
+             </div>
+      
+         </div>
+     </div>
+         <h3><span>Amount payable: R</span><span class="total" x-text="getTotal().toFixed(2)"></span></h3>
+         <br>
+         <div class="checkout-sec">
+             <input type="number" value="1" x-model="tendered">
+            
+             <button @click="checkout" class="check">Pay</button>
+         </div>
+         
+         <p x-text="feedbackText"></p>
         
+           
+     </div>
+ 
+         
 
         <!--div class="cart-row">
             <table>

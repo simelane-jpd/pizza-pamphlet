@@ -52,7 +52,7 @@ document.addEventListener('alpine:init', () => {
             if(this.getTotal() > parseFloat(this.tendered)){
                 //const change=this.getTotal - parseFloat
                // message.innerHTML = "Enjoy your Pizza! your change is R" + change.toFixed(2);
-                return 'Funds too low'
+                return 'Funds too low' 
             }else if(this.getTotal() <= parseFloat(this.tendered)){
                 return 'Funds are sufficient'
            
@@ -62,12 +62,15 @@ document.addEventListener('alpine:init', () => {
         checkout(){
             if(this.feedbackText() == 'Funds too low'){
                 window.alert('Declined! Insufficient funds.')
+            }else if(this.tendered === ''){
+                window.alert('You did not put in any amount')
                 
             }else{
                 
                 this.smallCount = 0
                 this.medCount = 0
                 this.largeCount = 0
+                this.tendered = ''
                 window.alert("Approved! Enjoy your Pizza!")
             }
             
