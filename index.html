@@ -13,10 +13,11 @@
 
    
     <div class="container">
+      
         <div class="small">
             <span class="shop-item-title"><h2>Small Pizza</h2></span>
             <!--h2>Small Pizza</h2-->
-            <img class="shop-item-image" src="small.jpg" alt="">
+            <img class="shop-item-image" src="medium.jpg" alt="">
             <span class="shop-item-price"><h3>R49.99</h3></span>
             <!--h3>R49.99</h3-->
             <p>Spicy Chicken, Onion, Green Peppers,
@@ -44,7 +45,7 @@
         <div class="large">
             <span class="shop-item-title"><h2>Large Pizza</h2></span>
             <!--h2>Large Pizza</h2-->
-            <img class="shop-item-image" src="large.jpg" alt="">
+            <img class="shop-item-image" src="medium.jpg" alt="">
             <div class="shop-item-details">
             <span class="shop-item-price"><h3>R129.99</h3></span>
             <!--h3>R129.99</h3-->
@@ -52,6 +53,7 @@
                 Green Peppers and Garlic</p>
                 <button @click="addLarge(largeCount)">Add to cart</button>
                 <!--button class="pBtn large buy" type="button">Add to cart</button-->
+            
             </div>
         </div>
     </div>
@@ -60,7 +62,7 @@
     <div class="cart" x-show="smallCount != 0 || medCount != 0 || largeCount != 0">
        
         <div class="cart-title"><h1>Cart</h1></div>
-
+<div class="piz">
         <div class="boxpizza">
         <div class="smallpizza" x-show="smallCount != 0">
              <div>
@@ -119,21 +121,23 @@
              </li>
              </ul>
              </div>
-      
-         </div>
-     </div>
+            </div>
+        </div>
+    
+    
          <h3><span>Amount payable: R</span><span class="total" x-text="getTotal().toFixed(2)"></span></h3>
-         <br>
+        
          <div class="checkout-sec">
              <input type="number" value="1" x-model="tendered">
             
              <button @click="checkout" class="check">Pay</button>
-         </div>
-         
-         <p x-text="feedbackText"></p>
         
-           
-     </div>
+        </div>
+         <p x-text="feedbackText"></p>
+    
+        </div>
+    
+    </div>
  
          
 

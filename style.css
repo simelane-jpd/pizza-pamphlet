@@ -84,6 +84,10 @@ h1 {
 .cart-title {
     color:#073b4c;
 }
+.amount {
+    text-align: left;
+    display: flex;
+}
 .check {
     background-color:#fed9b7;
    
